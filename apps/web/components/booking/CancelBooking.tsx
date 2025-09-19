@@ -185,7 +185,6 @@ export default function CancelBooking(props: Props) {
       node.scrollIntoView({ behavior: "smooth" });
       node.focus();
     }
-     
   }, []);
 
   return (

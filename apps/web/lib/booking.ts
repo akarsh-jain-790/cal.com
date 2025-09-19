@@ -82,6 +82,7 @@ export const getEventTypesFromDB = async (id: number) => {
           brandColor: true,
           darkBrandColor: true,
           theme: true,
+          cancellationReasonRequired: true,
           parent: {
             select: {
               hideBranding: true,

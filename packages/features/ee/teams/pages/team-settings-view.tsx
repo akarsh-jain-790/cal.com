@@ -224,7 +224,10 @@ const CancellationReasonSettingsView = ({ team }: ProfileViewProps) => {
   const cancellationReasonOptions = [
     { value: CancellationReasonRequired.MANDATORY_FOR_BOTH, label: t("mandatory_for_both") },
     { value: CancellationReasonRequired.MANDATORY_FOR_HOST_ONLY, label: t("mandatory_for_host_only") },
-    { value: CancellationReasonRequired.MANDATORY_FOR_ATTENDEE_ONLY, label: t("mandatory_for_attendee_only") },
+    {
+      value: CancellationReasonRequired.MANDATORY_FOR_ATTENDEE_ONLY,
+      label: t("mandatory_for_attendee_only"),
+    },
     { value: CancellationReasonRequired.OPTIONAL_FOR_BOTH, label: t("optional_for_both") },
   ];
 
