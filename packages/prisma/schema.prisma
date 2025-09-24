@@ -1758,7 +1758,7 @@ model BookingDenormalized {
 }
 
 view BookingTimeStatusDenormalized {
-  id             Int           @id @unique
+  id             Int           @unique
   uid            String
   eventTypeId    Int?
   title          String
