@@ -2678,11 +2678,14 @@ model TeamBilling {
   teamId Int    @unique
   team   Team?  @relation("TeamBilling", fields: [teamId], references: [id], onDelete: Cascade)
 
-  subscriptionId     String @unique
-  subscriptionItemId String
-  customerId         String
-  status             String
-  planName           String
+  subscriptionId       String    @unique
+  subscriptionItemId   String
+  customerId           String
+  status               String
+  planName             String
+  subscriptionStart    DateTime?
+  subscriptionTrialEnd DateTime?
+  subscriptionEnd      DateTime?
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -2693,11 +2696,14 @@ model OrganizationBilling {
   teamId Int    @unique
   team   Team   @relation("OrganizationBilling", fields: [teamId], references: [id], onDelete: Cascade)
 
-  subscriptionId     String @unique
-  subscriptionItemId String
-  customerId         String
-  status             String
-  planName           String
+  subscriptionId       String    @unique
+  subscriptionItemId   String
+  customerId           String
+  status               String
+  planName             String
+  subscriptionStart    DateTime?
+  subscriptionTrialEnd DateTime?
+  subscriptionEnd      DateTime?
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
